@@ -1,0 +1,51 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+
+#navid{
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+#button1{
+    justify-content: center;
+    text-align: center;
+    margin-top: 35px;
+    color: skyblue;
+    background-color: white;
+}
+
+#form_{
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+
+/* targeting wrong thing or using wrong css, target actual box*/
+
+.table{
+    margin-top: 25px;
+    background-color: white;
+}
+
+
+/* background */
+#picture {
+    background-repeat: no-repeat;
+    background-size: cover; /* width height */
+  }
+
+/*footer*/
+#footer{
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}

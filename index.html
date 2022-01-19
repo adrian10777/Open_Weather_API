@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <meta name="Description" content="Weather API" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
+    <title>Weather Forecast</title>
+</head>
+
+
+<body>
+    
+    <!-- Nav tabs -->
+    
+    <ul class="nav nav-item" id="navid">
+        <li class="nav-item">
+            <a href="https://accuweather.com" class="nav-link active" style="color: white;">Weather Data</a>
+        </li>
+        <li class="nav-item">
+            <a href="index.html" class="nav-link active" style="color: white;">Interactive Weather Map </a>
+        </li>
+        <li class="nav-item">
+            <a href="https://accuweather.com" class="nav-link active" style="color: white;">Weather Radar</a>
+        </li>
+    </ul>
+
+    <!-- image -->
+    <style>
+        body {
+            background-image: url('https://images.hdqwalls.com/wallpapers/snow-trees-covered-aurora-4k-qe.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+    </style>
+
+    <div id="weather" class="row justify-content-center mt=6">
+        <div id="form_" class="col-10">
+            <section>
+                <form>
+                    <label class='city' for='city'>
+                        <h6>City</h6>
+                    </label>
+                    <input type='text' class='text' placeholder="Enter city name" id='city'>
+                    <br>
+                    <br>
+                    <label class='state' for='state'>
+                        <h6>State</h6>
+                    </label>
+                    <input type='text' class='text' placeholder="Enter State name" id='state'>
+                    <br>
+                    <br>
+                    <label class='country' for='country'>
+                        <h6>Country</h6>
+                    </label>
+                    <input type='text' class='text' placeholder="Enter Country name" id='country'>
+                    <br>
+                    <button type="button" class='btn btn-primary' id="button1" onClick=getData()>
+                        <h5>Search</h5>
+                    </button>
+                </form>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt=8">
+        <div class="col-3">
+            <table id="table_1" class="table">
+                <thead>
+                    <tr>
+                        <th scope='col'>High</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="high-0"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-2">
+            <table id="table_2" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Low</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="low-0"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-3">
+            <table id="table_3" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Forecast</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="forecast-0"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-2">
+            <table id="table_4" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Humidity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="humidity-0"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+    </div>
+    </div>
+
+    
+    <div id="footer">
+        <p>Weather App</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
